@@ -11,39 +11,67 @@
 //   removeDupesCI('cAtCaT'); // 'cAt'
 
 
-function removeDupes(input){
-let seenBefore = []
+function removeDupes(input) {
+  let seenBefore = []
 
-let inputArray = input.split('');
+  let inputArray = input.split('');
 
-for (element of inputArray) {
-	if (seenBefore.includes(element) !== true) {
-		seenBefore.push(element);
-	}
+  for (element of inputArray) {
+    if (seenBefore.includes(element) !== true) {
+      seenBefore.push(element);
+    }
+  }
+
+  return seenBefore.join('');
+
 }
 
-return seenBefore.join('');
+/* ALTERNATE SOLUTIONS */
+
+function removeDupesWithObjKeys(input) {
+  let uniqueCharObj = {};
+  let inputArray = input.split('');
+
+  inputArray.forEach(char => {
+    uniqueCharObj[char] = 1
+  });
+
+  return Object.keys(uniqueCharObj).join('');
 
 }
+
+function removeDupesWithSet(input) {
+  let uniqueCharSet = new Set();
+  let inputArray = input.split('');
+
+  for (element of inputArray) {
+    uniqueCharSet.add(element)
+  }
+
+  return [...uniqueCharSet].join('');
+
+}
+
+/* ================== */
 
 //CI for case insensitive
-function removeDupesCI(input){
-	let seenBefore = []
+function removeDupesCI(input) {
+  let seenBefore = []
 
-	let inputArray = input.split('');
+  let inputArray = input.split('');
 
-	for (element of inputArray) {
-		if (seenBefore.includes(element.toUpperCase()) !== true && seenBefore.includes(element.toLowerCase()) !== true) {
-			seenBefore.push(element);
-		}
-	}
+  for (element of inputArray) {
+    if (seenBefore.includes(element.toUpperCase()) !== true && seenBefore.includes(element.toLowerCase()) !== true) {
+      seenBefore.push(element);
+    }
+  }
 
-	return seenBefore.join('');
+  return seenBefore.join('');
 
 }
-console.log(removeDupesCI('AaAaBbBb'));
 
-module.exports = {removeDupes:removeDupes,
-									removeDupesCI:removeDupesCI,
-									attendance :"ENTER ATTENDANCE HERE"
-								 };
+module.exports = {
+  removeDupes: removeDupes,
+  removeDupesCI: removeDupesCI,
+  attendance: "ENTER ATTENDANCE HERE"
+};
