@@ -12,13 +12,36 @@
 
 
 function removeDupes(input){
+let seenBefore = []
+
+let inputArray = input.split('');
+
+for (element of inputArray) {
+	if (seenBefore.includes(element) !== true) {
+		seenBefore.push(element);
+	}
+}
+
+return seenBefore.join('');
 
 }
 
 //CI for case insensitive
 function removeDupesCI(input){
+	let seenBefore = []
+
+	let inputArray = input.split('');
+
+	for (element of inputArray) {
+		if (seenBefore.includes(element.toUpperCase()) !== true && seenBefore.includes(element.toLowerCase()) !== true) {
+			seenBefore.push(element);
+		}
+	}
+
+	return seenBefore.join('');
 
 }
+console.log(removeDupesCI('AaAaBbBb'));
 
 module.exports = {removeDupes:removeDupes,
 									removeDupesCI:removeDupesCI,
