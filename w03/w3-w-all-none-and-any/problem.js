@@ -31,41 +31,51 @@ You do not need to worry about the data supplied, it will be an array at all tim
 
 
 Array.prototype.all = function (callback) {
-  for (element of this) {
+  // for (element of this) {
+  //   if (!callback(element)) { // At the first sign of false, return false! Because not ALL are true.
+  //     return false;
+  //   }
+  // }
+  // return true;
 
-    if (!callback(element)) { // At the first sign of false, return false! Because not ALL are true.
-      return false;
-    }
-  }
-  return true;
+  return this.filter(callback).length === this.length;
+
 }
 
+console.log([1, 2, 3].all(isGreaterThanZero));
+console.log([-1, 0, 2].all(isGreaterThanZero));
 // [-1, 2, 3].none(isLessThanZero) => false
 // [-1, -2, -3].none(isGreaterThanZero) => true
 // *** YOUR CODE HERE ***
 
 Array.prototype.none = function (callback) {
-  for (element of this) {
+  // for (element of this) {
+  //   if (callback(element)) { // At the first sign of true, return false! Because at least ONE is true.
+  //     return false;
+  //   }
+  // }
+  // return true;
 
-    if (callback(element)) { // At the first sign of true, return false! Because at least ONE is true.
-      return false;
-    }
-  }
-  return true;
+  return this.filter(callback).length === 0;
+
 }
+
+
 
 // [-1, 2, 3].any(isGreaterThanZero) => true
 // [-1, -2, -3].any(isGreaterThanZero) => false
 // *** YOUR CODE HERE ***
 
 Array.prototype.any = function (callback) {
-  for (element of this) {
+  // for (element of this) {
+  //   if (callback(element)) { // At the first sign of true, return true! Because at least ONE is true.
+  //     return true;
+  //   }
+  // }
+  // return false;
 
-    if (callback(element)) { // At the first sign of true, return true! Because at least ONE is true.
-      return true;
-    }
-  }
-  return false;
+  return this.filter(callback).length > 0;
+
 }
 
 
