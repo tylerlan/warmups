@@ -42,8 +42,6 @@ Array.prototype.all = function (callback) {
 
 }
 
-console.log([1, 2, 3].all(isGreaterThanZero));
-console.log([-1, 0, 2].all(isGreaterThanZero));
 // [-1, 2, 3].none(isLessThanZero) => false
 // [-1, -2, -3].none(isGreaterThanZero) => true
 // *** YOUR CODE HERE ***
@@ -60,8 +58,6 @@ Array.prototype.none = function (callback) {
 
 }
 
-
-
 // [-1, 2, 3].any(isGreaterThanZero) => true
 // [-1, -2, -3].any(isGreaterThanZero) => false
 // *** YOUR CODE HERE ***
@@ -77,7 +73,6 @@ Array.prototype.any = function (callback) {
   return this.filter(callback).length > 0;
 
 }
-
 
 // use these to test your array methods!
 function isGreaterThanZero(num) {
