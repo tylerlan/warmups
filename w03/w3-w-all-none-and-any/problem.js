@@ -30,32 +30,60 @@ You do not need to worry about the data supplied, it will be an array at all tim
 // *** YOUR CODE HERE ***
 
 
+Array.prototype.all = function (callback) {
+  for (element of this) {
+
+    if (!callback(element)) { // At the first sign of false, return false! Because not ALL are true.
+      return false;
+    }
+  }
+  return true;
+}
 
 // [-1, 2, 3].none(isLessThanZero) => false
 // [-1, -2, -3].none(isGreaterThanZero) => true
 // *** YOUR CODE HERE ***
 
+Array.prototype.none = function (callback) {
+  for (element of this) {
+
+    if (callback(element)) { // At the first sign of true, return false! Because at least ONE is true.
+      return false;
+    }
+  }
+  return true;
+}
 
 // [-1, 2, 3].any(isGreaterThanZero) => true
 // [-1, -2, -3].any(isGreaterThanZero) => false
 // *** YOUR CODE HERE ***
 
+Array.prototype.any = function (callback) {
+  for (element of this) {
+
+    if (callback(element)) { // At the first sign of true, return true! Because at least ONE is true.
+      return true;
+    }
+  }
+  return false;
+}
+
 
 // use these to test your array methods!
-function isGreaterThanZero (num) {
+function isGreaterThanZero(num) {
   return num > 0;
 }
 
-function isLessThanZero (num) {
+function isLessThanZero(num) {
   return num < 0;
 }
 
-// write some of your own invocations below, 
+// write some of your own invocations below,
 // do your results match the original expected results?
 // *** YOUR CODE HERE ***
 
 module.exports = {
   arrayObj: Array,
   cb: isGreaterThanZero,
-  attendance:"wordy word here"
+  attendance: "wordy word here"
 }
