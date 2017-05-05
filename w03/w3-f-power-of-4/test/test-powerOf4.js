@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-var powerI = require("../problem").powerOf4;
+var powerI = require("../problem").powerOf4I;
 var powerR = require('../problem').powerOf4R;
 
 describe('powerOf4 iterative function', function(){
@@ -33,6 +33,7 @@ describe('powerOf4 recursive function', function(){
     expect(powerR(12)).to.be.equal(false);
     expect(powerR(8)).to.be.equal(false);
   });
+  debugger
   it('should return true if the number is a power of 4', function(){
     expect(powerR(4)).to.be.equal(true);
     expect(powerR(16)).to.be.equal(true);
