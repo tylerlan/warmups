@@ -31,6 +31,8 @@ function powerOf4I(x) {
 function powerOf4R(x) {
   let dividedByFour = x / 4;
 
+  console.log(dividedByFour);
+
   if (dividedByFour === 4 || dividedByFour === 1) {
     return true;
   } else if (dividedByFour > 4) {

@@ -4,9 +4,9 @@
  )\))(        (          (          (  (    )\))(   '    )  (       )      (              
 ((_)()\   (   )(    (    )\   (     )\))(  ((_)()\ )  ( /(  )(     (      ))\  `  )   (   
 (_()((_)  )\ (()\   )\ )((_)  )\ ) ((_))\  _(())\_)() )(_))(()\    )\  ' /((_) /(/(   )\  
-|  \/  | ((_) ((_) _(_/( (_) _(_/(  (()(_) \ \((_)/ /((_)_  ((_) _((_)) (_))( ((_)_\ ((_) 
-| |\/| |/ _ \| '_|| ' \))| || ' \))/ _` |   \ \/\/ / / _` || '_|| '  \()| || || '_ \)(_-< 
-|_|  |_|\___/|_|  |_||_| |_||_||_| \__, |    \_/\_/  \__,_||_|  |_|_|_|  \_,_|| .__/ /__/ 
+|  \/  | ((_) ((_) _(_/( (_) _(_/(  (()(_) \ \((_)/ /((_)_  ((_) _((_)) (_))( ((_)_\ ((_)
+| |\/| |/ _ \| '_|| ' \))| || ' \))/ _` |   \ \/\/ / / _` || '_|| '  \()| || || '_ \)(_-<
+|_|  |_|\___/|_|  |_||_| |_||_||_| \__, |    \_/\_/  \__,_||_|  |_|_|_|  \_,_|| .__/ /__/
                                    |___/                                      |_|         
 ```
 
@@ -14,11 +14,9 @@
 The goal is to get students in practice using Git & Github, and to get them comfortable with one-off interview questions. This format also allows for super simple attendance tracking to keep the tracking process off the shoulders of the instructors and to keep 100% accuracy in reporting.
 
 #### What:
-This repo contains morning warmups for web dev students to complete in the mornings before lecture. Typically the time given for completion ranges from 45 to 60 minutes. 
+This repo contains morning warmups for web dev students to complete in the mornings before lecture. Typically the time given for completion ranges from 45 to 60 minutes.
 
 These warmups also export an attendance word for easy tracking of attendance using [Tyler's GitHub Autograder] (https://github.com/gSchool/github-autograder)
-
-
 
 
 #### How:
